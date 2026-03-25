@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <div id="divId">
+    <img id="img"/>
+  </div>
+  <body>
+    <script>
+
+
+
+async function loadFiles() {
+  try {
+    let response = await fetch("https://dog.ceo/api/breeds/image/random");
+
+    if (!response.ok) {
+      throw new Error("HTTP Error: " + response.status);
+    }
+
+    let data = await response.json();
+    console.log(data);
+
+    const imageEl =  document.getElementById("img");
+    imageEl.src = data.message;
+    imageEl.alt = "ramdom dog";
+    document.getElementById("divId").appendChild(imageEl);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+loadFiles();
+
+
+
+
+    </script>
+  </body>
+</html>

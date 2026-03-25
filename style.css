@@ -1,0 +1,35 @@
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  margin-top: 30px;
+  background-color: #dfe1e5;
+  padding: 10px;
+  margin: 10px;
+}
+
+.cImage1 {
+  margin-top: 10px;
+  display: block;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
+}
+
+.cInput1 {
+  display: block;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid 242424;
+  border-radius: 5px;
+}
+
+.main {
+  background-color: antiquewhite;
+  color: red;
+  font-size: 20px;
+}

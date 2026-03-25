@@ -1,0 +1,71 @@
+#profile-pic {
+  border-radius: 50%;
+  width: 150px;
+  border: 5px solid #efb0c9;
+}
+
+.happy-monkey-regular {
+  font-family: "Happy Monkey", system-ui;
+  font-weight: 800;
+  font-style: normal;
+}
+body {
+  text-align: center;
+  background: linear-gradient(#a2d2ff, #efb0c9);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-shadow: 1px 1px black;
+}
+
+h2,
+h3,
+h4 {
+  background-color: #efb0c9;
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gift-img {
+  margin: 0 auto;
+  width: 400px;
+  height: 400px;
+  border: 5px solid white;
+  border-radius: 10px;
+  background-image: url("https://thumbs.dreamstime.com/b/christmas-gift-border-frame-gold-ribbon-christmas-gift-border-frame-gold-ribbon-bow-160273988.jpg");
+  background-size: cover;
+}
+
+#gift-1-img:hover {
+  background-image: url("https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUycWhvNXpob2VveXpzOWJ4bnNmbTFyYXYwMTQ4cHY2NWE3aTZ2cGg0YiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/31lPv5L3aIvTi/200.gif");
+}
+
+#gift-2-img:hover {
+  background-image: url("https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUyeXBjZTJ1cWR0dmZ3NHJ4a3RldG5ycnlkcW1ueG5sejBvcndubnZ6YyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/r6CfPrSnOB17O/200w.gif");
+}
+
+#gift-3-img:hover {
+  background-image: url("https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUycWJuZHQ1M2dqemdyeXYweml3cGM4a3M0cW1iNzg0czRyNzd5YTFrdiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/LfT5GFFYXX7T2dCOVL/giphy.gif");
+}
+
+#gift-4-img:hover {
+  background-image: url("https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUyY3NxNmRrYTl6eHNrOXF3N2xrdWpxMnhucjhzZ2gxbWlmaTN5enBsMyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/VIoJEvVTq8X1R3fqP7/giphy.gif");
+}
+
+#gift-5-img {
+  height: 200px;
+}
+#gift-5-img:hover {
+  background-image: url("https://media1.tenor.com/m/LCpGmX5A6NIAAAAC/cheers-toast.gif");
+}

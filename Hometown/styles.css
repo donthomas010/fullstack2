@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  text-align: center;
+}
+
+.head {
+  background-image: url("https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/southwestontario/Forks_of_Thames_London_2_custom_db7277e1-9fb6-4b46-93ac-0e885f22cad1.jpg");
+  height: 400px;
+}
+
+.activity-img {
+  width: 100px;
+  height: 100px;
+}
+
+.three-activity {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
