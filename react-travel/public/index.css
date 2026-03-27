@@ -1,0 +1,17 @@
+header{
+    background-color: red;
+    display: flex;
+}
+body{
+    margin: 0;
+    color: blue;
+}
+
+article.journey-entry{
+    display: flex;
+    border: 1px black solid;
+}
+
+.main-img{
+    width: 100px;
+}
