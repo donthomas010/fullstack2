@@ -7,7 +7,7 @@ export default function App(){
     return(
         <>
             <h1>name: {name}</h1>
-            <Header />
+            <Header />  
             <Entry 
                 img = "./src/assets/hero.png"
                 alt = "hero img"
@@ -22,8 +22,20 @@ export default function App(){
                 location = "London"
                 date = "22th january 2026"
             />
-            <Entry />
-            <Entry />
+            <Entry 
+                img = "./src/assets/hero.png"
+                alt = "hero 2 img"
+                country = "India"
+                location = "Kerala"
+                date = "22th january 2025"
+            />
+            <Entry 
+                img = "./src/assets/hero.png"
+                alt = "hero 2 img"
+                country = "China"
+                location = "China Town"
+                date = "22th Febuary 2026"
+            />
         </>
     )
-}
+} 
