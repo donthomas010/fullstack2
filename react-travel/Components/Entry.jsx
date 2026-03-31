@@ -1,8 +1,8 @@
 export default function Entry(props){
-
+    console.log(props)
     return(
         <article className="journey-entry">
-            <img className="main-img" src = {props.img} alt= {props.alt} />
+            <img className="main-img" src = {props.img.src} alt= {props.img.alt} />
             <div>
                 <span>{props.country}</span>
                 <a href="">View google</a>

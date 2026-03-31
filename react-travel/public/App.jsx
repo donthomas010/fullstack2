@@ -1,14 +1,38 @@
 import Header from "../Components/Header.jsx";
 import Entry from "../Components/Entry.jsx";
+import data from "./data.js";
 
 export default function App(){
 
-    const name ="don"
+    //Method 1
+    // const location = data.map((place) =>{
+    //     return (<Entry 
+    //         key = {place.id}
+    //         img = {place.img.src} 
+    //         alt = {place.img.alt} 
+    //         country = {place.country} 
+    //         location = {place.location}
+    //         date = {place.date}/>)
+    // })
+
+    //Method 2
+    // const location = data.map((entry) =>{
+    //     return (<Entry 
+    //         key = {entry.id}
+    //         entry = {entry} />)
+    // })
+
+    //Method 3
+    const location = data.map((entry) =>{
+        return (<Entry 
+            key = {entry.id}
+            {...entry} />)
+    })
+    
     return(
         <>
-            <h1>name: {name}</h1>
             <Header />  
-            <Entry 
+            {/* <Entry 
                 img = "./src/assets/hero.png"
                 alt = "hero img"
                 country = "Japan"
@@ -21,21 +45,8 @@ export default function App(){
                 country = "Canada"
                 location = "London"
                 date = "22th january 2026"
-            />
-            <Entry 
-                img = "./src/assets/hero.png"
-                alt = "hero 2 img"
-                country = "India"
-                location = "Kerala"
-                date = "22th january 2025"
-            />
-            <Entry 
-                img = "./src/assets/hero.png"
-                alt = "hero 2 img"
-                country = "China"
-                location = "China Town"
-                date = "22th Febuary 2026"
-            />
+            /> */}
+            {location}
         </>
     )
 } 
