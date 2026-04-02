@@ -22,15 +22,30 @@ export default function Content(){
         func("Definitely")
     }
 
-    const [count, setCount] = React.useState(10)
+    // const [count, setCount] = React.useState(10)  
+    // function add(){
+    //     setCount(prevCount => prevCount + 1)
+    // }
+
+    // function minus(){
+    //     setCount(prevCount => prevCount - 1)
+    // }
+
+    const [count, setCount] = React.useState(5)
 
     function add(){
-        setCount(count+1)
+        setCount(prevCount => prevCount + 2)
+    }
+
+    function minus(){
+        setCount(prevCount => prevCount - 2)
     }
 
 
-    function minus(){
-        setCount(count-1)
+    const [isGoing, setIsGoing] = React.useState(true)
+
+    function clickState(){
+        setIsGoing(prevIsGoing => !prevIsGoing )
     }
 
     return(
@@ -47,6 +62,7 @@ export default function Content(){
                 <button onClick={minus}>-</button>
                 <h2>{count}</h2>
                 <button onClick={add}>+</button>
+                <button className="value" onClick={clickState}>{isGoing ? "Yex" : "No"}</button>
             </div>
         </main>
     )
