@@ -2,68 +2,69 @@ import React from "react"
 
 export default function Content(){
 
-    const ingredients = ['chicken', 'oregano', 'Tomato']
+    const [ingredients, setIngredients]= React.useState(['chicken', 'oregano', 'Tomato'])
     const addIngredient = ingredients.map((ingredient) =>{
         return <li key={ingredient}>{ingredient}</li>
     })
 
-    function handleSubmit(event){
-        event.preventDefault()
-        const formData = new FormData(event.currentTarget)
+    function addNew(formData){
+ 
         const newIngredient = formData.get("ingredient")
-        ingredients.push(newIngredient)
-        console.log(ingredients)
+        setIngredients(prevIngredient => [...prevIngredient, newIngredient])
     }
 
-    const [result, func]  = React.useState("Hello")
-    console.log(result, func)
+    //Testing
+    // const [result, func]  = React.useState("Hello")
+    // console.log(result, func)
 
-    function handleClick(){
-        func("Definitely")
-    }
-
-    // const [count, setCount] = React.useState(10)  
+    // //Counter addition & Substraction
+    // const [count, setCount] = React.useState(5)
     // function add(){
-    //     setCount(prevCount => prevCount + 1)
+    //     setCount(prevCount => prevCount + 2)
     // }
 
     // function minus(){
-    //     setCount(prevCount => prevCount - 1)
+    //     setCount(prevCount => prevCount - 2)
     // }
 
-    const [count, setCount] = React.useState(5)
+    // //Set state yes, No
+    // const [isGoing, setIsGoing] = React.useState(true)
 
-    function add(){
-        setCount(prevCount => prevCount + 2)
-    }
+    // function clickState(){
+    //     setIsGoing(prevIsGoing => !prevIsGoing )
+    // }
 
-    function minus(){
-        setCount(prevCount => prevCount - 2)
-    }
+    // //Complex arrays
+    // const [myThings, setMyThings] = React.useState(["aaaa","fdfdef"]);
+    // const allThings = ["11", "qq", "44", "vdgfd"];
+    // const thingsElement = myThings.map(thing =>  <p key={thing}>{thing}</p>)
 
-
-    const [isGoing, setIsGoing] = React.useState(true)
-
-    function clickState(){
-        setIsGoing(prevIsGoing => !prevIsGoing )
-    }
-
+    // function addthings(){
+    //     setMyThings(prevMyThings => [...prevMyThings, allThings[myThings.length]])
+    //     console.log(myThings.length)
+    // }
     return(
         <main>
-            <form onSubmit={handleSubmit} className="add-ingredient-form">
+            <form action={addNew} className="add-ingredient-form">
                 <input type="text" placeholder="Oregano" name="ingredient"/>
                 <button type="submit"> Add ingredient</button>
-                <button onClick={handleClick}> {result}</button>
             </form>
+
             <ul>
                 {addIngredient}
             </ul>
+            {/* 
             <div>
+            <button onClick={handleClick}> {result}</button>
                 <button onClick={minus}>-</button>
                 <h2>{count}</h2>
                 <button onClick={add}>+</button>
                 <button className="value" onClick={clickState}>{isGoing ? "Yex" : "No"}</button>
-            </div>
+                <div>
+                    {thingsElement}
+                </div>
+                <button onClick={addthings}>Add</button>
+            </div> */}
         </main>
     )
 }
