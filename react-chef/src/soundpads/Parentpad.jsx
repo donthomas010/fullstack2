@@ -13,8 +13,22 @@ export default function Parentpad(props){
     }
 
     const buttonElement = pads.map(pad =>{
-        return <Pads key= {pad.id} color={pad.color} on={pad.on}/>
+        return <Pads key= {pad.id} id = {pad.id} color={pad.color} on={pad.on} toggle = {toggle}/>
     })
+
+    function toggle(id){
+        //console.log("clicked", id, pads) 
+        setPads(prePad => prePad.map(item =>{
+            return item.id === id ? {...item, on : !item.on} : item
+        }))   
+    }
+
+    // function toggle(id) {
+    //     setPads(prevPads =>
+    //         prevPads.map(item =>item.id === id ? { ...item, on: !item.on } : item)
+    //     );
+    // }
+
     return(<main>
         {buttonElement}
     </main>)
