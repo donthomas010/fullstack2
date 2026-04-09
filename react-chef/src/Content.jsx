@@ -2,7 +2,7 @@ import React from "react"
 
 export default function Content(){
 
-    const [ingredients, setIngredients]= React.useState(['chicken', 'oregano', 'Tomato'])
+    const [ingredients, setIngredients]= React.useState([])
     const addIngredient = ingredients.map((ingredient) =>{
         return <li key={ingredient}>{ingredient}</li>
     })
@@ -49,10 +49,20 @@ export default function Content(){
                 <input type="text" placeholder="Oregano" name="ingredient"/>
                 <button type="submit"> Add ingredient</button>
             </form>
+            {
+                addIngredient.length > 0 && 
+                <section>
+                    <h1>Ingredients are </h1>
+                    <ul>
+                        {addIngredient}
+                    </ul>
+                    {
+                        addIngredient.length > 2 && 
+                        <div>
+                        <button>Get a Recipe</button>
+                    </div>}
+                </section>}
 
-            <ul>
-                {addIngredient}
-            </ul>
             {/* 
             <div>
             <button onClick={handleClick}> {result}</button>

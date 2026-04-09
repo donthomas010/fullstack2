@@ -10,9 +10,11 @@ export default function Joke(props){
     }
     //console.log(props)
     console.log(isShown)
+    const buttonText = isShown ? "Hide" : "Show";
+
     return(<>
             {isShown && <h1>Inside Joke {props.setup} {props.punch} {props.count}</h1>}
-            <button onClick={toggleShown}>Show Punchline</button>
+            <button onClick={toggleShown}>{buttonText} Punchline</button>
             </>
         )
 }
